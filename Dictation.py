@@ -2,11 +2,11 @@ import random
 
 
 class Dictation:
-    def __init__(self, dic_lst):
-        self.dic_lst = dic_lst
-        self.incorrect_lst = []
+    def __init__(self, dcat):
+        self.dcat = dcat  # 作为听写内容的词典 {'hello':['i:喂,欸,你好,哎', 'v:你好']}
+        self.mistakes = []  # 存储听写过程中拼写错误的单词
 
-    @staticmethod
+    @staticmethod  # 传入单词释义列表 格式化输出
     def show_definition(definitions):
         random.shuffle(definitions)
         print('{:-^60}'.format('definition'))
@@ -17,20 +17,23 @@ class Dictation:
                 print(d)
         print('-' * 60)
 
-    def go_through(self):
-        dic_lst = self.dic_lst[:]
-        random.shuffle(dic_lst)
-        for word, definitions in dic_lst.items():
-            self.show_definition(definitions)
+    # 听写流程
+    def go_through(self, mistakes=False):
+        # mistake布尔值参数 是否单独听写上次拼写错误的单词
+        words = []
+        if mistakes:
+            words = self.mistakes[:]
+            self.mistakes = []  # 清空错记录用来存储新的错误
+        else:
+            for k in self.dcat.keys():
+                words.append(k)
+        random.shuffle(words)
+
+        for word in words:
+            self.show_definition(self.dcat[word])
+            print("Process:", str((words.index(word)) + 1) + '/' + str(len(words)))
             if input("Answer: ") == word:
-                print('[INFO] Correct!')
+                print('[√] Correct!')
             else:
-                print('[INFO] INCORRECT! Answer: ' + word)
-                self.incorrect_lst.append(word)
-            input()
-
-    def go_through_incorrect_lst(self):
-        inc_lst = self.incorrect_lst[:]
-        random.shuffle(inc_lst)
-        for w in inc_lst:
-
+                print('[×] INCORRECT! Answer: ' + word)
+                self.mistakes.append(word)
