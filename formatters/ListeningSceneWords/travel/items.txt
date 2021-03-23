@@ -1,0 +1,17 @@
+y walking boots 步行靴
+y wading boots 涉水靴
+y stout boots 结实的靴子
+y comfortable clothes/trousers 舒适的衣服
+y sandal [`sændl] 凉鞋
+y sun glasses 太阳眼镜
+y passport 护照
+y visa 签证
+y fishing gear 钓具
+y double-grill 双层烤架
+y booklet 小册子
+y book of local history 当地历史书
+y entrance fee 门票
+y insurance 保险
+y safety helmet 安全帽
+y souvenir 纪念品
+y tourist brochure 游客手册

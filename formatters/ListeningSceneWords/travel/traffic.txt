@@ -1,0 +1,25 @@
+y free transportation 免费运送
+y one-way ticket 单程票
+y round trip ticket 往返票
+y rush hour 交通高峰期
+y vehicle 车辆
+y wheel 方向盘，车轮
+y ferry 轮渡
+y flight 航班
+y bus route 公车路线
+y mini-sized coach 长途汽车
+y bicycle 自行车
+y motorcycle 摩托车
+y trolley 电车
+y tram 有轨电车
+y steam engine ship 蒸汽船
+y cable car 缆车
+y wheelchair 轮椅
+y double-decker bus 双层公共汽车
+y coach/ motor coach 长途汽车
+y trolleybus 无轨电车
+y tramcar, streetcar 有轨电车
+y tube/subway/underground/Metro 地铁
+y driving/driver's license 驾照
+y safety regulations 安全规章
+y helmet 头盔

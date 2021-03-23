@@ -1,0 +1,10 @@
+y family ticket 家庭套票
+y children 儿童
+y kid 儿童（非正式）
+y elder 长辈
+y the old 老人
+y passenger 旅客
+y shopper 购物者
+y commuter 通勤者
+y tourist 游客
+y thief 小偷

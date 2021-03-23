@@ -1,0 +1,31 @@
+y art gallery 画廊，艺术馆
+y education exhibition 教育展
+y cave 洞穴
+y fossil 化石
+y exhibition of instruments 乐器展
+y historical/ art/science/natural/museum 历史、艺术、科学、自然博物馆
+y concert hall 音乐厅
+y cathedral总教堂, 大教堂
+y church 教堂
+y castle 城堡
+y palace 宫殿
+y coastal area 沿海地区
+y eastern beach 东海岸
+y harbour/harbor海港
+y theme garden 主题花园
+y backyard (yard) <美>后花园
+y department store 百货商店
+y ancient temple 古庙
+y silent island 孤岛
+y tower 塔
+y outdoor activities 户外活动
+y forest area森林地带
+y wildlife 野生动植物
+y safari park 野生动物园
+y tropical rainforest 热带雨林
+y creek 小溪
+y Central Park 中心公园
+y Stonehenge 巨石阵
+y Great Barrier Reef 大堡礁
+y Sydney Opera House 悉尼歌剧院
+y Tower of London 伦敦塔

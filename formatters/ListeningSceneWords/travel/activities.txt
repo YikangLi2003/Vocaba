@@ -1,0 +1,21 @@
+y tour 旅行, 观光
+y tourism 旅游业
+y trip 短途旅行
+y voyage 航行, 航海
+y cruise乘船巡游
+y hiking 徒步旅行
+y banquet 宴会
+y feast 盛宴
+y picnic 野餐
+y camping 野营
+y barbecue 烧烤
+y swimming 游泳
+y jogging 慢跑
+y excursion 远足
+y cycling 骑自行车
+y mountain climbing 登山
+y hot air ballooning 乘坐热气球
+y rafting 漂流
+y skiing 滑雪
+y water skiing 滑水
+y rowing划船，赛艇运动

@@ -1,0 +1,22 @@
+y make a reservation 预定
+y book the ticket 预定票
+y confirm a reservation 确定定位
+y cancel one’s reservation 取消定位
+y first come, first reservation 先到先服务原则
+y fare 票价
+y toll 通行费
+y saver ticket 优惠票
+y open ticket 开放机票
+y one-way ticket 单程票
+y round-trip ticket 往返票
+y timetable 时刻表
+y airport tax 机场税
+y duty-free shop 免税店
+y vacant seat 空座
+y excess change 超重
+y direct/ non-stop flight 直达航班
+y connecting-flight 转机
+y layover/ stopover 中途停留
+y check in 办理登记手续
+y driving license 驾照
+y expire （信用卡，护照）过期

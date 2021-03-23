@@ -1,0 +1,5 @@
+y hotel 宾馆
+y motel 汽车旅馆
+y youth hostel 青年旅社
+y B&B (bed and breakfast) 民宿
+y cottage 小屋
