@@ -42,7 +42,7 @@ class TxDict:
         else:
             print('[×]', str((self.wordlst.index(word)) + 1) + '/' + str(len(self.wordlst)),
                   word, resp['msg'] + ' ' + self.error_info[resp['code']][1])
-            return self.result
+            return True
 
     def get_definition(self):
         for word in self.wordlst:
@@ -56,11 +56,10 @@ class TxDict:
 
         return self.result
 
-td = TxDict('1dec8cb373f09df013042e4d5e8c21ef', ['yes', 'gukaleesfda'])
+
+td = TxDict('1dec8cb373f09df013042e4d5e8c21ef', ['cookie', 'need', 'fuck'])
 td.get_definition()
 print(td.result)
-
-
 
 '''
 {'code': 250, 'msg': '数据返回为空'}
