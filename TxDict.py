@@ -6,6 +6,7 @@ class TxDict:
     def __init__(self, apikey, wordlst):
         self.apikey = apikey
         self.wordlst = wordlst
+        self.url = 'http://api.tianapi.com/txapi/enwords/index?key=' + self.apikey + '&word='
         self.result = {}
         self.error_rprt = []
         self.error_info = {
@@ -27,35 +28,36 @@ class TxDict:
         }
 
     def show_error_report(self):
+        # 列出查询失败的单词 如果有
         if self.error_rprt:
-            print("[WARNING] 以下单词" + self.error_info[250][1])
+            print("[!] 以下单词" + self.error_info[250][1])
             for e in self.error_rprt:
                 print('[→] ' + e)
 
-    def generate_definition(self):
-        url = 'http://api.tianapi.com/txapi/enwords/index?key=' + self.apikey + '&word='
+    def generate_error_info(self, resp, word):
+        if resp['code'] == 250:
+            self.result[word] = 'Error250'
+            self.error_rprt.append(word)
+            print('[!]', str((self.wordlst.index(word)) + 1) + '/' + str(len(self.wordlst)), word, 'Error-250')
+        else:
+            print('[×]', str((self.wordlst.index(word)) + 1) + '/' + str(len(self.wordlst)),
+                  word, resp['msg'] + ' ' + self.error_info[resp['code']][1])
+            return self.result
 
+    def get_definition(self):
         for word in self.wordlst:
-            resp = json.loads(urllib.request.urlopen(url + word).read().decode())
-            try:
+            resp = json.loads(urllib.request.urlopen(self.url + word).read().decode())
+            if 'newslist' in resp:
                 self.result[word] = resp['newslist'][0]['content'].split('|')
-            except KeyError:
-                if resp['code'] == 250:
-                    self.result[word] = 'Error250'
-                    self.error_rprt.append(word)
-                    print('[WARNING] Error250: ' + word)
-                else:
-                    print('[FATAL] ' + resp['msg'] + ' ' + self.error_info[resp['code']][1])
-                    break
+                print('[√]', str((self.wordlst.index(word)) + 1) + '/' + str(len(self.wordlst)), word)
             else:
-                print('[OK]', str((self.wordlst.index(word)) + 1) + '/' + str(len(self.wordlst)), word)
+                if self.generate_error_info(resp, word):
+                    break
 
-        print("[INFO] 单词列表查询完成")
-        self.show_error_report()
         return self.result
 
-td = TxDict('1dec8cb373f09df013042e4d5e8c21ef', ['yes', 'fatal', 'warning', 'wuhu', 'shit'])
-td.generate_definition()
+td = TxDict('1dec8cb373f09df013042e4d5e8c21ef', ['yes', 'gukaleesfda'])
+td.get_definition()
 print(td.result)
 
 
