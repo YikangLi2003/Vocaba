@@ -13,10 +13,11 @@ class Dictation:
 
     @staticmethod  # 传入单词释义列表 格式化输出
     def show_definition(defin, recovery):
+        os.system('cls')
         if recovery:
-            print('{:-^60}'.format('recovery'), '\n')
+            print('{:-^60}'.format('Recovery'), '\n')
         else:
-            print('{:-^60}'.format('definition'), '\n')
+            print('{:-^60}'.format('Definition'), '\n')
 
         if str(type(defin)) == "<class 'str'>":
             print('{:^60}'.format(defin))
@@ -44,6 +45,9 @@ class Dictation:
 
     # 听写流程
     def go_through(self, recovery=False):
+        if not self.dcat:
+            return None
+
         words = self.get_wordlist(recovery)  # 将要听写的词表
         if not recovery:
             self.score = len(words)
@@ -67,4 +71,3 @@ class Dictation:
                 if not recovery:
                     self.score -= 1
                 input("[i] Press 'enter' to continue...")
-            os.system('cls')

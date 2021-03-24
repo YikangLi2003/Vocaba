@@ -57,11 +57,11 @@ class TxDict:
         return self.result
 
 
+'''
 td = TxDict('1dec8cb373f09df013042e4d5e8c21ef', ['cookie', 'need', 'fuck'])
 td.get_definition()
 print(td.result)
 
-'''
 {'code': 250, 'msg': '数据返回为空'}
 {'code': 230, 'msg': 'key错误或为空'}
 {'code': 200, 'msg': 'success', 'newslist': [{'word': 'hello', 'content': 'i:喂,欸,你好,哎|v:你好'}]}
