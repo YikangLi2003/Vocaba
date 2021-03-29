@@ -58,6 +58,19 @@ def get_composed_word_set(tkinter, settings):
     return word_set
 
 
+def revise_wrong_definitions(wd_set_lists, correction_dict):  # {"old word":[new word, new defn]}
+    for wd_set in wd_set_lists:
+        with open(wd_set, 'r') as set_file:
+            content = json.load(set_file)
+        for old_word in correction_dict.keys():
+            if old_word in dict:
+                new = correction_dict.pop(old_word)
+                del content[old_word]
+                content[new[0]] = new[1]
+        with open(wd_set, 'w') as set_file:
+            json.dump(content, set_file)
+
+
 def dictation_start(dictation, tkinter, settings):
     while True:
         dictation.dcat = get_composed_word_set(tkinter, settings)
