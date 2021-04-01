@@ -75,6 +75,26 @@ def revise_wrong_definitions(wd_set_lists, correction_dict):  # {"old word":[new
             del correction_dict[w]
 
 
+def get_revise_words():
+    print("[i] Input problematical word(s) and it's new spelling/definition.")
+    print("    Format: problem word, correct spelling, correct definition ")
+    words = {}
+    while True:
+        word = input("[>] ").split(',')
+        if len(word) != 3:
+            if word[0] == 'c':
+                return {}
+            elif word[0] == 'ok':
+                return words
+            else:
+                print('[×] Fail to identify terms with wrong format.')
+                continue
+        if word[1] == '':
+            word[1] = word[0]
+        words[word[0].strip()] = [word[1].strip(), word[2].strip()]
+        #  org_word,new_speeling,new_definition
+
+
 def dictation_start(dictation, tkinter, settings):
     while True:
         dictation.dcat = get_composed_word_set(tkinter, settings)
