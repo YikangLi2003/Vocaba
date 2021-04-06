@@ -38,7 +38,7 @@
       <recent name="C:\Users\win10\Desktop\githubClone\Vocaba\formatters\listening" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.revise">
+  <component name="RunManager" selected="Python.get_revise_words">
     <configuration name="Dictation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vocaba" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="listeningWordsFormatter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_revise_words" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vocaba" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,12 +91,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/formatters" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/formatters/listeningWordsFormatter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/get_revise_words.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.get_revise_words" />
         <item itemvalue="Python.revise" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.functions" />
         <item itemvalue="Python.Dictation" />
-        <item itemvalue="Python.listeningWordsFormatter" />
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +187,9 @@
       <workItem from="1617105317050" duration="2861000" />
       <workItem from="1617113548129" duration="1535000" />
       <workItem from="1617280088020" duration="1905000" />
+      <workItem from="1617321653180" duration="310000" />
+      <workItem from="1617719024681" duration="973000" />
+      <workItem from="1617720015697" duration="930000" />
     </task>
     <servers />
   </component>
@@ -195,6 +198,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Vocaba$Dictation.coverage" NAME="Dictation 覆盖结果" MODIFIED="1616502187452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Vocaba$get_revise_words.coverage" NAME="get_revise_words 覆盖结果" MODIFIED="1617719521648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Vocaba$functions.coverage" NAME="functions 覆盖结果" MODIFIED="1616502406590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Vocaba$main.coverage" NAME="main 覆盖结果" MODIFIED="1616729126655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Vocaba$revise.coverage" NAME="revise 覆盖结果" MODIFIED="1617114644653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
