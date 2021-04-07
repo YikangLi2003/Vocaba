@@ -1,6 +1,7 @@
 import tkinter as tk
 from TxDict import TxDict
 from Dictation import Dictation
+from SetsReviser import SetsReviser
 from Settings import Settings
 from functions import *
 
@@ -9,6 +10,7 @@ def main():
     # 实例化各个对象
     settings = Settings()
     dictation = Dictation()
+    sets_reviser = SetsReviser()
 
     while True:
         show_funcs(settings.funcs_info)  # 列出支持的操作
@@ -17,6 +19,8 @@ def main():
         if index == '1':
             dictation_start(dictation, tk, settings)
         elif index == '2':
+            revise_sets(sets_reviser, tk, settings)
+        elif index == '3':
             exit()
 
 

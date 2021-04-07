@@ -1,12 +1,1 @@
-{
-  "family ticket": "\u5bb6\u5ead\u5957\u7968",
-  "children": "\u513f\u7ae5",
-  "kid": "\u513f\u7ae5\uff08\u975e\u6b63\u5f0f\uff09",
-  "elder": "\u957f\u8f88",
-  "the old": "\u8001\u4eba",
-  "passenger": "\u65c5\u5ba2",
-  "shopper": "\u8d2d\u7269\u8005",
-  "commuter": "\u901a\u52e4\u8005",
-  "tourist": "\u6e38\u5ba2",
-  "thief": "\u5c0f\u5077"
-}
+{"family ticket": "\u5bb6\u5ead\u5957\u7968", "children": "\u513f\u7ae5", "kid": "\u513f\u7ae5\uff08\u975e\u6b63\u5f0f\uff09", "elder": "\u957f\u8f88", "the old": "\u8001\u4eba", "passenger": "\u65c5\u5ba2", "shopper": "\u8d2d\u7269\u8005", "commuter": "\u901a\u52e4\u8005", "tourist": "\u6e38\u5ba2", "thief": "\u5c0f\u5077"}

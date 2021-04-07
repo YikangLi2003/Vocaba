@@ -5,10 +5,10 @@ import json
 
 def show_funcs(funcs):
     os.system('cls')
-    print('=' * 10)
+    print("{:=^30}\n".format("Welcome"))
     for k, v in funcs.items():
-        print(k + '. ' + v)
-    print('=' * 10)
+        print("{:}. {:^27}".format(k, v))
+    print("\n" + '=' * 30)
 
 
 def get_func_index(funcs):
@@ -32,6 +32,19 @@ def show_result(score, full_score, mistakes):
             print("{:^60}".format(m))
 
     print('\n', ('-' * 60))
+
+
+def show_words(sets):
+    sets = list(sets)
+    for set in sets:
+        print("{:-^61}".format(os.path.basename(set)))
+        with open(set, 'r') as fileobj:
+            content = json.load(fileobj)
+        for w, d in content.items():
+            if str(type(d)) == "<class 'list'>":
+                d = ' '.join(d)
+            print("{:^30} {:^30}".format(w, str(d)))
+        print('\n')
 
 
 def get_word_sets(tkinter, settings):
@@ -58,16 +71,29 @@ def get_composed_word_set(tkinter, settings):
     return word_set
 
 
+def revise_sets(sets_reviser, tkinter, settings):
+    sets_reviser.sets = get_word_sets(tkinter, settings)
+    os.system('cls')
+    if sets_reviser.sets:
+        show_words(sets_reviser.sets)
+        sets_reviser.get_revise_words()
+        sets_reviser.revise_wrong_definitions()
+    input("[i] Press 'enter' to finish.")
+
+
 def dictation_start(dictation, tkinter, settings):
     while True:
         dictation.dcat = get_composed_word_set(tkinter, settings)
-        dictation.go_through()
-        mistakes = dictation.recovery[:]
-        if mistakes:
-            for i in range(len(mistakes)):
-                mistakes[i] = mistakes[i] + ' - ' + dictation.dcat[mistakes[i]]
-        while dictation.recovery:
-            dictation.go_through(recovery=True)
-        show_result(dictation.score, len(dictation.dcat), mistakes)
-        if not input('[?] Start a new round? (y/n): ').lower().startswith('y'):
+        if dictation.dcat:
+            dictation.go_through()
+            mistakes = dictation.recovery[:]
+            if mistakes:
+                for i in range(len(mistakes)):
+                    mistakes[i] = mistakes[i] + ' - ' + dictation.dcat[mistakes[i]]
+            while dictation.recovery:
+                dictation.go_through(recovery=True)
+            show_result(dictation.score, len(dictation.dcat), mistakes)
+            if not input('[?] Start a new round? (y/n): ').lower().startswith('y'):
+                break
+        else:
             break
