@@ -1,2 +1,2 @@
 # Vocaba
-to help me learn new words
+F0r learning english and passing exam, that's all...
